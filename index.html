@@ -11,11 +11,13 @@
 <body>
     <div class="container">
         <div class="content first-content">
+
             <div class="first-column">
                 <h2 class="title title-primary">Não possui conta?</h2>
                 <p class="decription description-primary">Sem problemas! Cadastre-se abaixo!</p>
                 <button id="signup" class="btn btn-primary">Cadastrar-se</button>
             </div>
+
             <div class="second-column">
                 <h2 class="title title-secundary">Entre com sua conta</h2>
 
@@ -36,22 +38,39 @@
                                 <i class="fa-brands fa-google"></i>
                             </li>
                         </a>
-                    
                     </ul>
                 </div>
 
                 <p class="decription description-secundary">ou use suas credenciais:</p>
-                <span id="signin-error-message"></span>
+                <span id="signin-email-error-message"></span>
+                <span id="signin-password-error-message"></span>
+
                 <form id="signin-form" class="form" action="./greetings.html">
 
                     <label class="label-input">
                         <i class="fa-solid fa-envelope icon"></i>
-                        <input id="signin-email" type="email" placeholder="Email" required>
+                        <!--
+                        O Comentário abaixo pode ser utilizada para que o próprio "type='email'" valide o formato do email
+                        e o "required" garanta que o campo não fique vazio. Porém, optei por realizar essas validações por JavaScript,
+                        usando o "type='text'" e sem "required".
+                        -->
+
+                        <!-- <input id="signin-email" type="email" placeholder="Email" required> -->
+
+                        <input id="signin-email" type="text" placeholder="Email">
                     </label>
 
                     <label class="label-input">
                         <i class="fa-solid fa-lock icon"></i>
-                        <input id="signin-password" type="password" placeholder="Senha" minlength="6" required>
+                        <!--
+                        A linha abaixo pode ser utilizada para que o "minlenght" garanta ter pelo menos 6 caracteres
+                        e o "required" garanta que o campo não fique vazio. Porém, optei por realizar essa validação por JavaScript, 
+                        sem "minlength" e "required".
+                        -->
+
+                        <!-- <input id="signin-password" type="password" placeholder="Senha" minlength="6" required> -->
+
+                        <input id="signin-password" type="password" placeholder="Senha">
                     </label>
                     
                     <a class="forget-password" href="#">Esqueceu sua senha?</a>
@@ -60,14 +79,18 @@
 
             </div>
         </div>
+
         <div class="content second-content">
+
             <div class="first-column">
                 <h2 class="title title-primary">Já possui uma conta?</h2>
                 <p class="decription description-primary">Clique no botão abaixo para fazer login</p>
                 <button id="signin" class="btn btn-primary">Fazer Login</button>
             </div>
+
             <div class="second-column">
                 <h2 class="title title-secundary">Crie sua conta</h2>
+
                 <div class="social-media">
                     <ul class="list-social-media">
                         <a class="link-social-media" href="#">
@@ -85,28 +108,49 @@
                                 <i class="fa-brands fa-google"></i>
                             </li>
                         </a>
-                    
                     </ul>
                 </div>
+
                 <p class="decription description-secundary">também pode se cadastrar com os dados abaixo:</p>
-                <span id="signup-error-message"></span>
-                <form id="signup-form" class="form">
+                <span id="signup-name-error-message"></span>
+                <span id="signup-email-error-message"></span>
+                <span id="signup-password-error-message"></span>
+
+                <form id="signup-form" class="form" action="./greetings.html">
+
                     <label class="label-input">
                         <i class="fa-solid fa-user icon"></i>
-                        <input type="text" placeholder="Nome" required>
+                        <input id="signup-name" type="text" placeholder="Nome">
                     </label>
 
                     <label class="label-input">
                         <i class="fa-solid fa-envelope icon"></i>
-                        <input id="signup-email" type="email" placeholder="Email" required>
+                        <!--
+                        O Comentário abaixo pode ser utilizada para que o próprio "type='email'" valide o formato do email
+                        e o "required" garanta que o campo não fique vazio. Porém, optei por realizar essas validações por JavaScript,
+                        usando o "type='text'" e sem "required".
+                        -->
+
+                        <!-- <input id="signup-email" type="email" placeholder="Email" required> -->
+
+                        <input id="signup-email" type="text" placeholder="Email">
                     </label>
 
                     <label class="label-input">
                         <i class="fa-solid fa-lock icon"></i>
-                        <input id="signup-password" type="password" placeholder="Senha" minlength="6" required>
+                       <!--
+                        A linha abaixo pode ser utilizada para que o "minlenght" garanta ter pelo menos 6 caracteres
+                        e o "required" garanta que o campo não fique vazio. Porém, optei por realizar essa validação por JavaScript, 
+                        sem "minlength" e "required".
+                        -->
+
+                        <!-- <input id="signup-password" type="password" placeholder="Senha" minlength="6" required> -->
+
+                        <input id="signup-password" type="password" placeholder="Senha">
                     </label>
                     <button id="signup-submit" class="btn btn-secundary" type="submit">Cadastrar-se</button>
                 </form>
+                
             </div>
         </div>
     </div>

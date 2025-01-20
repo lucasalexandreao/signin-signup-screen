@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* RESETANDO VALORES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CONFIGURAÇÕES BÁSICAS DE ESTILIZAÇÃO */
 body {
     font-family: 'Montserrat', serif;
 }
@@ -73,12 +75,14 @@ p {
 
 .error {
     font-size: 14px;
-    background-color: transparent;
-    color: #ff0033;
+    width: 150px;;
+    background-color: #ff0033;
+    color: #fff;
     border: 2px solid #ff0033;
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
+    text-align: center;
 }
 
 .btn {
@@ -224,6 +228,8 @@ input:-webkit-autofill {
     text-align: center;
 }
 
+
+/* CONFIGURAÇÕES DA TROCA DE CONTEÚDO LOGIN E CADASTRO */
 .signup-js .first-content .first-column,
 .signup-js .first-content .second-column {
     z-index: -1;
@@ -283,6 +289,7 @@ input:-webkit-autofill {
     animation: fadeout2 .5s;
 }
 
+/* ANIMAÇÕES */
 @keyframes fadein {
     from {
         opacity: 0;
@@ -344,5 +351,117 @@ input:-webkit-autofill {
     to {
         left: 0%;
         width: 40%;
+    }
+}
+
+/* CONFIGURAÇÕES PARA REPONSIVIDADE*/
+@media screen and (max-width: 1040px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .first-content, .second-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .first-column, .second-column {
+        width: 100%;
+    }
+    
+    .signup-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+
+    }
+    .form {
+        width: 90%;
+    }
+    
+
+    /* ANIMAÇÕES */
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+    
+        50% {
+            opacity: .5;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+    
+    
+    @keyframes fadeout1 {
+        from {
+            top: 0;
+            z-index: 12;
+        }
+    
+        to {
+            top: -110px;
+            z-index: -1;
+        }
+    }
+    
+    @keyframes fadeout2 {
+        from {
+            top: 0;
+            z-index: 12;
+        }
+    
+        to {
+            top: 110px;
+            z-index: -1;
+        }
+          
+    }
+    
+    
+    @keyframes slidein {
+        from {
+            top: 0;
+            height: 40%;
+        }
+    
+        to {
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideout {
+        from {
+            top: 60%;
+            height: 40%;
+        }
+    
+        to {
+            top: 0%;
+            height: 40%;
+        }
+    }
+   
+}
+
+/* CONFIGURAÇÕES PARA REPONSIVIDADE */
+@media screen and (max-width: 740px) {
+    .form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form {
+        width: 100%;
     }
 }
