@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/76a19f3e04.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Não possui conta?</h2>
+                <p class="decription description-primary">Sem problemas! Cadastre-se abaixo!</p>
+                <button id="signup" class="btn btn-primary">Cadastrar-se</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-secundary">Entre com sua conta</h2>
+
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-facebook"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-instagram"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-google"></i>
+                            </li>
+                        </a>
+                    
+                    </ul>
+                </div>
+
+                <p class="decription description-secundary">ou use suas credenciais:</p>
+                <span id="signin-error-message"></span>
+                <form id="signin-form" class="form" action="./greetings.html">
+
+                    <label class="label-input">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <input id="signin-email" type="email" placeholder="Email" required>
+                    </label>
+
+                    <label class="label-input">
+                        <i class="fa-solid fa-lock icon"></i>
+                        <input id="signin-password" type="password" placeholder="Senha" minlength="6" required>
+                    </label>
+                    
+                    <a class="forget-password" href="#">Esqueceu sua senha?</a>
+                    <button id="signin-submit" class="btn btn-secundary" type="submit">Entrar</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Já possui uma conta?</h2>
+                <p class="decription description-primary">Clique no botão abaixo para fazer login</p>
+                <button id="signin" class="btn btn-primary">Fazer Login</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-secundary">Crie sua conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-facebook"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-instagram"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fa-brands fa-google"></i>
+                            </li>
+                        </a>
+                    
+                    </ul>
+                </div>
+                <p class="decription description-secundary">também pode se cadastrar com os dados abaixo:</p>
+                <span id="signup-error-message"></span>
+                <form id="signup-form" class="form">
+                    <label class="label-input">
+                        <i class="fa-solid fa-user icon"></i>
+                        <input type="text" placeholder="Nome" required>
+                    </label>
+
+                    <label class="label-input">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <input id="signup-email" type="email" placeholder="Email" required>
+                    </label>
+
+                    <label class="label-input">
+                        <i class="fa-solid fa-lock icon"></i>
+                        <input id="signup-password" type="password" placeholder="Senha" minlength="6" required>
+                    </label>
+                    <button id="signup-submit" class="btn btn-secundary" type="submit">Cadastrar-se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
