@@ -49,7 +49,7 @@ function validateForm(emailInput, passwordInput, emailErrorMessage, passwordErro
         validEmail = true;
     } else {
         emailErrorMessage.classList.add("error");
-        emailErrorMessage.textContent = "Email inválido!";
+        emailErrorMessage.textContent = "Email em formato inválido!";
     }
 
     if(passwordInput.value.length >= 6) {
@@ -60,7 +60,7 @@ function validateForm(emailInput, passwordInput, emailErrorMessage, passwordErro
         validPassword = true;
     } else {
         passwordErrorMessage.classList.add("error");
-        passwordErrorMessage.textContent = "Senha inválida!";
+        passwordErrorMessage.textContent = "A senha deve conter pelo menos 6 caracteres!";
     }
 
     if(validEmail && validPassword) {
@@ -83,16 +83,15 @@ signupForm.addEventListener("submit", (event) => {
     var validName = false;
 
     if(signupNameInput.value.length > 0) {
+        validName = true;
         if(signupNameErrorMessage.classList.contains("error")) {
             signupNameErrorMessage.classList.remove("error");
             signupNameErrorMessage.textContent = "";
-            validName = true;
         }
     } else {
         signupNameErrorMessage.classList.add("error");
-        signupNameErrorMessage.textContent = "Nome inválido!";
+        signupNameErrorMessage.textContent = "Preencha o campo de nome!";
     }
-
     if(validateForm(signupEmailInput, signupPasswordInput, signupEmailErrorMessage, signupPasswordErrorMessage) && validName) {
         event.currentTarget.submit();
     }
